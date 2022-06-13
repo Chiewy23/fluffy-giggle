@@ -4,9 +4,13 @@ import App from './containers/App';
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import { searchRobots } from "./redux-robofriends/reducers";
 
 import './index.css';
 import "tachyons";
+
+
+const store = createStore(searchRobots);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

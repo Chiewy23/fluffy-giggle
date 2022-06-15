@@ -1,6 +1,6 @@
 import './App.css';
 import { Component } from 'react';
-import { setSearchField } from "../redux-robofriends/actions";
+import {requestRobots, setSearchField} from "../redux-robofriends/actions";
 import { connect } from "react-redux";
 
 import CardList from '../components/CardList';
@@ -10,49 +10,34 @@ import ErrorBoundary from "../components/ErrorBoundary";
 
 const mapStateToProps = state => {
     return {
-        searchField: state.searchField
+        searchField: state.searchRobots.searchField,
+        robots: state.requestRobots.robots,
+        isPending: state.requestRobots.isPending,
+        error: state.requestRobots.error
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onRequestRobots: () => requestRobots(dispatch)
     }
 }
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            robots: []
-        }
-    }
 
     componentDidMount() {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then(res => {
-                return res.json();
-            })
-            .then(users => {
-                this.setState({
-                    robots: users
-                })
-            })
-            .catch(err => {
-                console.error("[-] ERROR retrieving users data.");
-            });
+        this.props.onRequestRobots();
     }
 
     render() {
-        const { robots } = this.state;
-        const { searchField, onSearchChange } = this.props;
+        const { searchField, onSearchChange, robots, isPending } = this.props;
 
         const filteredRobots = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         });
 
-        return robots.length === 0 ?
+        return isPending ?
             (
                 <div className="App">
                     <h1 className="f1">RoboFriends</h1>

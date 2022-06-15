@@ -61,7 +61,7 @@ class App extends Component {
             ) : (
                 <div className="App">
                     <h1 className="f1">RoboFriends</h1>
-                    <SearchBox searchChange={onSearchChange} />
+                    <SearchBox searchChange={ onSearchChange } />
                     <Scroll>
                         <ErrorBoundary>
                             <CardList robots={ filteredRobots } />

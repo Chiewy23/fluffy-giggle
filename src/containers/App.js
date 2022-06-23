@@ -8,6 +8,13 @@ import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import ErrorBoundary from "../components/ErrorBoundary";
 
+/*
+TO-DO:
+- Error boundaries.
+- Code splitting.
+- Unit tests.
+ */
+
 const mapStateToProps = state => {
     return {
         searchField: state.searchRobots.searchField,

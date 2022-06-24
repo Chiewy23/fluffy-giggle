@@ -12,6 +12,8 @@ import ErrorBoundary from "../components/ErrorBoundary";
 TO-DO:
 - Code splitting.
 - Unit tests.
+- Clickable robots --> Redirects to page for robot.
+- Update README.md
  */
 
 const mapStateToProps = state => {

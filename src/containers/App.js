@@ -10,7 +10,6 @@ import ErrorBoundary from "../components/ErrorBoundary";
 
 /*
 TO-DO:
-- Error boundaries.
 - Code splitting.
 - Unit tests.
  */

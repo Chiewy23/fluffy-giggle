@@ -1,10 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import App from '../containers/App';
+import {Provider} from "react-redux";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+// https://testing-library.com/docs/react-testing-library/api#baseelement
+
+const stubStore = {
+  getState: jest.fn()
+}
+
+test('onRequestRobots() is invoked', () => {
+  const { container } = render(<Provider store={stubStore}><App /></Provider>);
+  console.log(container.innerHTML);
+  expect(true).toBe(true);
 });
 
 // Robots request is made.

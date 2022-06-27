@@ -1,17 +1,13 @@
-import { render, screen } from '@testing-library/react';
 import App from '../containers/App';
-import {Provider} from "react-redux";
 
-// https://testing-library.com/docs/react-testing-library/api#baseelement
+// https://testing-library.com/docs/
+// https://www.thereformedprogrammer.net/unit-testing-react-components-that-use-redux/
 
-const stubStore = {
-  getState: jest.fn()
-}
-
-test('onRequestRobots() is invoked', () => {
-  const { container } = render(<Provider store={stubStore}><App /></Provider>);
-  console.log(container.innerHTML);
-  expect(true).toBe(true);
+describe("When mounting the App component", () => {
+  it("should render the RoboFriends title", () => {
+    //const wrapper = mount(<App />)
+    //expect(wrapper.find("h1").length).toBe(1);
+  });
 });
 
 // Robots request is made.

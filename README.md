@@ -1,6 +1,6 @@
 # Fluffy-Giggle
 
-This project was taken from a Udemy course titled "The Complete Junior to Senior Web Developer Roadmap".
+This project was taken from an Udemy course titled "The Complete Junior to Senior Web Developer Roadmap".
 
 The basis of the web app is 'RoboFriends', a site whereby Robots are retrieved via an API call and listed on the 
 homepage; the robots can also be filtered by name.

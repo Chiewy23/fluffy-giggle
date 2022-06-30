@@ -3,10 +3,10 @@ import { Component } from 'react';
 import { requestRobots, setSearchField } from "../redux-robofriends/actions";
 import { connect } from "react-redux";
 
-import CardList from '../components/CardList';
-import SearchBox from "../components/SearchBox";
+import CardList from '../components/cards/CardList';
+import SearchBox from "../components/search/SearchBox";
 import Scroll from "../components/scroll/Scroll";
-import ErrorBoundary from "../components/ErrorBoundary";
+import ErrorBoundary from "../components/error-handling/ErrorBoundary";
 
 /*
 TO-DO:

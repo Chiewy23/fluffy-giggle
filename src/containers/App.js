@@ -55,7 +55,7 @@ class App extends Component {
                     <h1 className="f1">RoboFriends</h1>
                     <SearchBox searchChange={ onSearchChange } />
                     <Scroll>
-                        <ErrorBoundary>
+                        <ErrorBoundary errorMessage={ "Oops. That is not good..." }>
                             <CardList robots={ filteredRobots } />
                         </ErrorBoundary>
                     </Scroll>

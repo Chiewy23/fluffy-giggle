@@ -7,6 +7,7 @@ import CardList from '../components/cards/CardList';
 import SearchBox from "../components/search/SearchBox";
 import Scroll from "../components/scroll/Scroll";
 import ErrorBoundary from "../components/error-handling/ErrorBoundary";
+import Header from "../components/header/Header";
 
 /*
 TO-DO:
@@ -52,7 +53,7 @@ class App extends Component {
                 </div>
             ) : (
                 <div className="App">
-                    <h1 className="f1">RoboFriends</h1>
+                    <Header />
                     <SearchBox searchChange={ onSearchChange } />
                     <Scroll>
                         <ErrorBoundary errorMessage={ "Oops. That is not good..." }>

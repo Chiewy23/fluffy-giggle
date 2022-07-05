@@ -8,11 +8,11 @@ import SearchBox from "../components/search/SearchBox";
 import Scroll from "../components/scroll/Scroll";
 import ErrorBoundary from "../components/error-handling/ErrorBoundary";
 import Header from "../components/header/Header";
+import RobotPage from '../components/pages/RobotPage';
 
 /*
 TO-DO:
 - Code splitting.
-- Unit tests.
 - Clickable robots --> Redirects to page for robot.
  */
 

@@ -1,10 +1,11 @@
 import React from "react";
+import "./card.css";
 
 const Card = (props) => {
     const { name, email, id, onClick }  = props;
     
     return (
-        <div onClick={() => onClick() } className="card bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
+        <div onClick={ () => onClick() } className="custom-card card bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
             <img alt="robot" src={`https://robohash.org/${id}?200x200`} />
             <div>
                 <h2 data-testid="name">{ name }</h2>

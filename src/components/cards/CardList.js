@@ -5,6 +5,7 @@ const CardList = ({ robots }) => {
 
     const onClick = (name) => {
         console.log(`This is Robot ${name}`);
+        // https://www.geeksforgeeks.org/how-to-redirect-to-another-page-in-reactjs/
     }
 
     return robots.map(robot => {

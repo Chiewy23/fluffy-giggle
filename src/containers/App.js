@@ -31,6 +31,11 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
+const onClick = (props) => {
+    console.log(`This is Robot ${props.name}`);
+    // https://www.geeksforgeeks.org/how-to-redirect-to-another-page-in-reactjs/
+}
+
 class App extends Component {
 
     componentDidMount() {
@@ -56,7 +61,7 @@ class App extends Component {
                     <SearchBox searchChange={ onSearchChange } />
                     <Scroll>
                         <ErrorBoundary errorMessage={ "Oops. That is not good..." }>
-                            <CardList robots={ filteredRobots } />
+                            <CardList onClick={ onClick } robots={ filteredRobots } />
                         </ErrorBoundary>
                     </Scroll>
                 </div>

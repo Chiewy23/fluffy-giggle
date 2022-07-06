@@ -8,8 +8,10 @@ describe("When mounting the Card component", () => {
         id: "1234"
     };
 
+    const stubCallback = jest.fn();
+
     it("should render the name props", () => {
-        render(<Card key={stubProps.id} name={stubProps.name} email={stubProps.email} id={stubProps.id} />);
+        render(<Card  onClick={stubCallback} key={stubProps.id} name={stubProps.name} email={stubProps.email} id={stubProps.id} />);
 
         expect(screen.getByTestId("name").textContent).toBe("Charlie");
     });

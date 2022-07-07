@@ -31,8 +31,8 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-const onClick = (props) => {
-    console.log(`This is Robot ${props.name}`);
+const onClick = (args) => {
+    console.log(`This is Robot ${args.name}`);
     // https://www.geeksforgeeks.org/how-to-redirect-to-another-page-in-reactjs/
 }
 

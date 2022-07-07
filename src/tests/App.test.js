@@ -1,11 +1,18 @@
 
-// https://testing-library.com/docs/
-// https://www.thereformedprogrammer.net/unit-testing-react-components-that-use-redux/
 
-// Content is rendered without error.
+describe("When mounting the App component", () => {
+    it("should do some funky doo-lally", () => {
+        expect(true).toBe(true);
+    });
 
-// Robots request is made.
+    // https://testing-library.com/docs/
+    // https://www.thereformedprogrammer.net/unit-testing-react-components-that-use-redux/
 
-// CardList is rendered with correct data.
+    // Content is rendered without error.
 
-// onSearchChange is triggered.
+    // Robots request is made.
+
+    // CardList is rendered with correct data.
+
+    // onSearchChange is triggered.
+});

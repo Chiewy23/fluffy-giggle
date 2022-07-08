@@ -8,6 +8,8 @@ import { searchRobots, requestRobots } from "./redux-robofriends/reducers";
 import { createLogger } from "redux-logger/src";
 import thunkMiddleware from "redux-thunk";
 
+import * as registerRerviceWorker from "./serviceWorkerRegistration";
+
 import './index.css';
 import "tachyons";
 
@@ -23,6 +25,8 @@ root.render(
         </React.StrictMode>
     </Provider>
 );
+
+registerRerviceWorker.register();
 
 // ACTION
 // REDUCER

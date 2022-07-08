@@ -6,6 +6,7 @@ import Home from "../components/home/Home";
  * **** TO-DO ****
  *  - Update icons.
  *  - Implement React Router.
+ *  - Complete unit tests.
  */
 
 class App extends Component {

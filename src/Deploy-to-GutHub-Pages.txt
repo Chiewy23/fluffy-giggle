@@ -3,3 +3,4 @@
 3. Add deploy command to package.json - "deploy": "gh-pages -d build"
 4. Add hompepage key to package.json - "homepage": "https://my-username.github.io/fluffy-giggle"
 5. Run deployment - npm run deploy
+6. Navigate to GitHub settings --> GitHub pages --> Source (Change this to gh-pages branch from dropdown options).

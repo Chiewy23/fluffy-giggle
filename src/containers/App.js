@@ -1,6 +1,7 @@
 import './App.css';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Home from "../components/home/Home";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 /**
  * **** TO-DO ****
@@ -11,7 +12,13 @@ import Home from "../components/home/Home";
 
 class App extends Component {
     render() {
-        return <Home />
+        return (
+        <Router>
+            <Routes>
+                <Route path="/fluffy-giggle" element={<Home />} />
+            </Routes>
+        </Router>
+        );
     }
 }
 

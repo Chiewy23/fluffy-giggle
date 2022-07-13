@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 /**
  * **** TO-DO ****
  *  - Update icons.
- *  - Implement React Router.
  *  - Complete unit tests.
  */
 

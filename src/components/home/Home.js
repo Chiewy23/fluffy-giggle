@@ -24,11 +24,15 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-const onClick = (args) => {
-    console.log(`This is Robot ${args.name}`);
-}
-
 class Home extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            onClick: props.onClick
+        };
+    }
 
     componentDidMount() {
         this.props.onRequestRobots();
@@ -53,7 +57,7 @@ class Home extends Component {
                     <SearchBox searchChange={ onSearchChange } />
                     <Scroll>
                         <ErrorBoundary errorMessage={ "Oops. That is not good..." }>
-                            <CardList onClick={ onClick } robots={ filteredRobots } />
+                            <CardList onClick={ this.state.onClick } robots={ filteredRobots } />
                         </ErrorBoundary>
                     </Scroll>
                 </div>

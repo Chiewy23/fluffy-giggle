@@ -31,7 +31,6 @@ class App extends Component {
     }
 
     render() {
-
         const { id, name, email } = this.state;
 
         return (

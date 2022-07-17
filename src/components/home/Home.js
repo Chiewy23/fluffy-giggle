@@ -26,14 +26,6 @@ const mapDispatchToProps = (dispatch) => {
 
 class Home extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            onClick: props.onClick
-        };
-    }
-
     componentDidMount() {
         this.props.onRequestRobots();
     }
@@ -57,7 +49,7 @@ class Home extends Component {
                     <SearchBox searchChange={ onSearchChange } />
                     <Scroll>
                         <ErrorBoundary errorMessage={ "Oops. That is not good..." }>
-                            <CardList onClick={ this.state.onClick } robots={ filteredRobots } />
+                            <CardList robots={ filteredRobots } />
                         </ErrorBoundary>
                     </Scroll>
                 </div>

@@ -22,21 +22,14 @@ class App extends Component {
         };
     }
 
-    _onClick = (args) => {
-        this.setState({
-            id: args.id,
-            name: args.name,
-            email: args.email
-        });
-    }
-
     render() {
         const { id, name, email } = this.state;
 
         return (
         <Router>
             <Routes>
-                <Route path="/fluffy-giggle" element={<Home onClick={this._onClick} />} />
+                <Route path="/" element={() => <div>Hello</div>} />
+                <Route path="/fluffy-giggle" element={<Home />} />
                 <Route path="/fluffy-giggle/:id" element={<RobotPage id={id} name={name} email={email} />} />
             </Routes>
         </Router>

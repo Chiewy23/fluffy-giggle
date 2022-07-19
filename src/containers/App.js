@@ -8,7 +8,8 @@ import RobotPage from '../components/pages/RobotPage';
  * **** TO-DO ****
  *  - Update icons.
  *  - Complete unit tests.
- *  - Page redirection.
+ *  - Default page and unrecorgnised url page.
+ *  - Back button for robot page.
  */
 
 class App extends Component {

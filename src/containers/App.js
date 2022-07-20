@@ -6,9 +6,8 @@ import RobotPage from '../components/pages/RobotPage';
 
 /**
  * **** TO-DO ****
- *  - Update icons.
  *  - Complete unit tests.
- *  - Default page and unrecorgnised url page.
+ *  - Default page for Route.
  *  - Back button for robot page.
  */
 

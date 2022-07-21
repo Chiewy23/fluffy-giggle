@@ -18,7 +18,7 @@ const Card = (props) => {
                 <p data-testid="email">{ email }</p>
             </div>
 
-            <button className="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray" onClick={ () => redirect() }>View</button>
+            <button className="f6 br3 link dim ph3 pv2 mb2 dib white bg-dark-gray" onClick={ () => redirect() }>View</button>
         </div>
     );
 }

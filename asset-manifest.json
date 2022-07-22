@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fluffy-giggle/static/css/main.ae0952e4.css",
-    "main.js": "/fluffy-giggle/static/js/main.25563b70.js",
+    "main.js": "/fluffy-giggle/static/js/main.afb55ed4.js",
     "service-worker.js": "/fluffy-giggle/service-worker.js",
     "static/media/SEGA.woff": "/fluffy-giggle/static/media/SEGA.47b4bfa94ef243af4a5b.woff",
     "index.html": "/fluffy-giggle/index.html",
     "main.ae0952e4.css.map": "/fluffy-giggle/static/css/main.ae0952e4.css.map",
-    "main.25563b70.js.map": "/fluffy-giggle/static/js/main.25563b70.js.map"
+    "main.afb55ed4.js.map": "/fluffy-giggle/static/js/main.afb55ed4.js.map"
   },
   "entrypoints": [
     "static/css/main.ae0952e4.css",
-    "static/js/main.25563b70.js"
+    "static/js/main.afb55ed4.js"
   ]
 }

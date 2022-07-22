@@ -10,6 +10,7 @@ import DefaultPage from '../components/pages/DefaultPage';
  *  - Complete unit tests.
  *  - Back button for robot page.
  *  - Error handling for when a user manually types an ID into URL.
+ *  - Error handling for unrecognised id in "/fluffy-giggle/:id".
  */
 
 class App extends Component {
@@ -17,8 +18,8 @@ class App extends Component {
         return (
         <Router>
             <Routes>
-                <Route path="/fluffy-giggle" element={<Home />} />
-                <Route path="/fluffy-giggle/:id" element={<RobotPage />} />
+                <Route exact path="/fluffy-giggle" element={<Home />} />
+                <Route exact path="/fluffy-giggle/:id" element={<RobotPage />} />
                 <Route path="*" element={<DefaultPage />} />
             </Routes>
         </Router>

@@ -1,8 +1,14 @@
 import React from "react";
+import DefaultPage from "./DefaultPage";
+
 import { useLocation } from "react-router-dom";
 
 const RobotPage = () => {
     const { state }  = useLocation();
+
+    if (state === null) {
+        return <DefaultPage />
+    }
 
     return (
         <article className="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">

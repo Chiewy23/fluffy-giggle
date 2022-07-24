@@ -1,5 +1,6 @@
 import React from "react";
 import DefaultPage from "./DefaultPage";
+import BasicButton from "../basic-button/BasicButton";
 
 import { useLocation } from "react-router-dom";
 
@@ -23,6 +24,8 @@ const RobotPage = () => {
                 She loves to get chin scratches and will
                 roll around on the floor waiting for you give her more of them.
             </p>
+
+            <BasicButton onClick={() => console.log("In progress...")} text="Home" />
         </article>
     );
 }

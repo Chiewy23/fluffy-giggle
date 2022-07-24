@@ -19,7 +19,7 @@ const RobotPage = () => {
                 <p>{ state.email }</p>
                 <hr className="mw3 bb bw1 b--black-10"/>
             </div>
-            <p className="lh-copy measure center f6 black-70">
+            <p className="tc lh-copy measure center f6 black-70">
                 Quite affectionate and outgoing.
                 She loves to get chin scratches and will
                 roll around on the floor waiting for you give her more of them.

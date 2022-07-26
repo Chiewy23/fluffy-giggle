@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 /**
  * **** TO-DO ****
  *  - Complete unit tests.
- *  - Back button callback (RobotPage and Default Page)
  */
 
 class App extends Component {

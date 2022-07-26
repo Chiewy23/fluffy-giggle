@@ -3,13 +3,18 @@ import DefaultPage from "./DefaultPage";
 import BasicButton from "../basic-button/BasicButton";
 import "./robot-page.css";
 
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const RobotPage = () => {
     const { state }  = useLocation();
+    const navigate = useNavigate();
+
+    const redirectToHomePage = () => {
+        navigate(`/fluffy-giggle`);
+    }
 
     if (state === null) {
-        return <DefaultPage />
+        return <DefaultPage onClick={ redirectToHomePage } />
     }
 
     return (
@@ -27,7 +32,7 @@ const RobotPage = () => {
             </p>
 
             <div className="robot-button">
-                <BasicButton onClick={() => console.log("In progress...")} text="Home" />
+                <BasicButton onClick={ redirectToHomePage } text="Home" />
             </div>
         </article>
     );

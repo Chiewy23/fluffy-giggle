@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import SearchBox from "../components/search/SearchBox";
+import SearchBox from "../../components/search/SearchBox";
 
 describe("When mounting the SearchBox component", () => {
     it("should render the placeholder text", () => {

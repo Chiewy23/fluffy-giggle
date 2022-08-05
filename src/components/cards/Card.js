@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import BasicButton from "../basic-button/BasicButton";
 
 const Card = (props) => {
-    const { name, email, id }  = props;
+    const { name, email, text, id }  = props;
     const navigate = useNavigate();
     const redirect = () => {
-        navigate(`/fluffy-giggle/${id}`, { state: { name, email, id }, replace: true });
+        navigate(`/fluffy-giggle/${id}`, { state: { name, email, text, id }, replace: true });
     }
     
     return (

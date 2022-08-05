@@ -26,9 +26,7 @@ const RobotPage = () => {
                 <hr className="mw3 bb bw1 b--black-10"/>
             </div>
             <p className="tc lh-copy measure center f6 black-70">
-                Quite affectionate and outgoing.
-                She loves to get chin scratches and will
-                roll around on the floor waiting for you give her more of them.
+                { state.text }
             </p>
 
             <div className="robot-button">

@@ -11,7 +11,7 @@ export const setSearchField = (text) => ({
     payload: text
 });
 
-export const requestRobots = (dispatch) => {
+export const requestRobots = async (dispatch) => {
     dispatch({ type: REQUEST_ROBOTS_PENDING });
     
     return fetch("https://jsonplaceholder.typicode.com/users")

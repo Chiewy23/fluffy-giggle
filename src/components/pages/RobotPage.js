@@ -1,6 +1,6 @@
 import React from "react";
 import DefaultPage from "./DefaultPage";
-import BasicButton from "../basic-button/BasicButton";
+import BasicButton from "../button/BasicButton";
 import Header from "../header/Header";
 import "./robot-page.css";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../header/Header";
-import BasicButton from "../basic-button/BasicButton";
+import BasicButton from "../button/BasicButton";
 
 import "./default-page.css";
 

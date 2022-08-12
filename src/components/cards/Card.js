@@ -2,7 +2,7 @@ import React from "react";
 import "./card.css";
 
 import { useNavigate } from 'react-router-dom';
-import BasicButton from "../basic-button/BasicButton";
+import BasicButton from "../button/BasicButton";
 
 const Card = (props) => {
     const { name, email, text, id }  = props;

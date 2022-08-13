@@ -9,6 +9,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 /**
  * **** TO-DO ****
  *  - Complete unit tests.
+ *  - Sidebar:
+ *      - Login
+ *      - Create Robot
+ *      - Delete Robot
+ *      - Edit Robot
+ *  - Create Robot option.
+ *  - Save Robots to DB (Redis or Postgres)
  */
 
 class App extends Component {

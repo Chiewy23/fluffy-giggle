@@ -23,9 +23,9 @@ class App extends Component {
         return (
         <Router>
             <Routes>
-                <Route exact path="/fluffy-giggle" element={<Home />} />
-                <Route exact path="/fluffy-giggle/:id" element={<RobotPage />} />
-                <Route path="*" element={<DefaultPage />} />
+                <Route path="/fluffy-giggle" element={<Home />} />
+                <Route path="/fluffy-giggle/:id" element={<RobotPage />} />
+                <Route path="*" element={<DefaultPage onClick={ () => console.log("Temp callback") } />} />
             </Routes>
         </Router>
         );

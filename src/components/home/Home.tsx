@@ -1,14 +1,42 @@
 import { requestRobots, setSearchField } from "../../redux-robofriends/actions";
 import { connect } from "react-redux";
-import { Component } from 'react';
+import { ChangeEvent, Component } from 'react';
 
 import CardList from '../cards/CardList';
 import SearchBox from "../search/SearchBox";
 import Scroll from "../scroll/Scroll";
 import ErrorBoundary from "../error-handling/ErrorBoundary";
 import Header from "../header/Header";
+import React from "react";
 
-const mapStateToProps = state => {
+interface IPropsHome extends ISearchRobots, IRequestRobots  {
+    onRequestRobots: Function,
+    onSearchChange: Function
+}
+
+interface IStateHome {
+    searchRobots: ISearchRobots,
+    requestRobots: IRequestRobots
+}
+
+interface ISearchRobots {
+    searchField: string
+}
+
+interface IRequestRobots {
+    robots: Array<IRobot>,
+    isPending: boolean,
+    error: string
+}
+
+interface IRobot {
+    id: string,
+    name: string,
+    email: string,
+    text: string,
+}
+
+const mapStateToProps = (state: IStateHome) => {
     return {
         searchField: state.searchRobots.searchField,
         robots: state.requestRobots.robots,
@@ -19,12 +47,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onSearchChange: (event: ChangeEvent<HTMLInputElement> ) => dispatch(setSearchField(event.target.value)),
         onRequestRobots: () => requestRobots(dispatch)
     }
 }
 
-class Home extends Component {
+class Home extends Component<IPropsHome> {
 
     componentDidMount() {
         this.props.onRequestRobots();

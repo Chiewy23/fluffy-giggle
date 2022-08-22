@@ -2,6 +2,9 @@ import { requestRobots, setSearchField } from "../../redux-robofriends/actions";
 import { connect } from "react-redux";
 import { ChangeEvent, Component } from 'react';
 
+import { IRequestRobots } from "./IRequestRobots";
+import { ISearchRobots } from "./ISearchRobots";
+
 import CardList from '../cards/CardList';
 import SearchBox from "../search/SearchBox";
 import Scroll from "../scroll/Scroll";
@@ -9,34 +12,7 @@ import ErrorBoundary from "../error-handling/ErrorBoundary";
 import Header from "../header/Header";
 import React from "react";
 
-interface IPropsHome extends ISearchRobots, IRequestRobots  {
-    onRequestRobots: Function,
-    onSearchChange: Function
-}
-
-interface IStateHome {
-    searchRobots: ISearchRobots,
-    requestRobots: IRequestRobots
-}
-
-interface ISearchRobots {
-    searchField: string
-}
-
-interface IRequestRobots {
-    robots: Array<IRobot>,
-    isPending: boolean,
-    error: string
-}
-
-interface IRobot {
-    id: string,
-    name: string,
-    email: string,
-    text: string,
-}
-
-const mapStateToProps = (state: IStateHome) => {
+const mapStateToProps = (state: { searchRobots: ISearchRobots, requestRobots: IRequestRobots }) => {
     return {
         searchField: state.searchRobots.searchField,
         robots: state.requestRobots.robots,
@@ -50,6 +26,11 @@ const mapDispatchToProps = (dispatch) => {
         onSearchChange: (event: ChangeEvent<HTMLInputElement> ) => dispatch(setSearchField(event.target.value)),
         onRequestRobots: () => requestRobots(dispatch)
     }
+}
+
+interface IPropsHome extends ISearchRobots, IRequestRobots  {
+    onRequestRobots: Function,
+    onSearchChange: Function
 }
 
 class Home extends Component<IPropsHome> {

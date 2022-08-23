@@ -10,7 +10,7 @@ import SearchBox from "../search/SearchBox";
 import Scroll from "../scroll/Scroll";
 import ErrorBoundary from "../error-handling/ErrorBoundary";
 import Header from "../header/Header";
-import React from "react";
+import React, { ChangeEventHandler } from "react";
 
 const mapStateToProps = (state: { searchRobots: ISearchRobots, requestRobots: IRequestRobots }) => {
     return {
@@ -30,7 +30,7 @@ const mapDispatchToProps = (dispatch) => {
 
 interface IPropsHome extends ISearchRobots, IRequestRobots  {
     onRequestRobots: Function,
-    onSearchChange: Function
+    onSearchChange: ChangeEventHandler<HTMLInputElement>
 }
 
 class Home extends Component<IPropsHome> {

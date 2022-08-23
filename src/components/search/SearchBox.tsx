@@ -1,6 +1,10 @@
-import React  from "react";
+import React, { ChangeEventHandler }  from "react";
 
-const SearchBox = ({ searchChange }) => {
+interface ISearchBox {
+    searchChange: ChangeEventHandler<HTMLInputElement>;
+}
+
+const SearchBox = ({ searchChange } : ISearchBox) => {
     return (
         <div className="pa2">
             <input className="pa3 ba b--green bg-lightest-blue"

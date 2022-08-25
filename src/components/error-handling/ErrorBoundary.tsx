@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import { IErrorBoundary } from "./IErrorBoundary";
+import { IStateErrorBoundary } from "./IStateErrorBoundary";
 
-class ErrorBoundary extends Component {
-    constructor(props) {
+
+class ErrorBoundary extends Component<IErrorBoundary, IStateErrorBoundary> {
+    constructor(props: IErrorBoundary) {
         super(props);
 
         this.state = {
@@ -10,7 +13,7 @@ class ErrorBoundary extends Component {
         };
     }
 
-    componentDidCatch(error, errorInfo) {
+    componentDidCatch() {
         this.setState({
             hasError: true
         });

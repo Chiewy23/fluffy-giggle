@@ -1,15 +1,9 @@
 import React from "react";
+import BasicButton from "../button/BasicButton";
 import "./card.css";
 
 import { useNavigate } from 'react-router-dom';
-import BasicButton from "../button/BasicButton";
-
-interface ICard {
-    name: any;
-    email: any;
-    text: any;
-    id: any;
-}
+import { ICard } from "./ICard";
 
 const Card = (props: ICard) => {
     const { name, email, text, id }  = props;

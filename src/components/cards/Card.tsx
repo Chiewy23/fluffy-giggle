@@ -4,7 +4,14 @@ import "./card.css";
 import { useNavigate } from 'react-router-dom';
 import BasicButton from "../button/BasicButton";
 
-const Card = (props) => {
+interface ICard {
+    name: any;
+    email: any;
+    text: any;
+    id: any;
+}
+
+const Card = (props: ICard) => {
     const { name, email, text, id }  = props;
     const navigate = useNavigate();
     const redirect = () => {

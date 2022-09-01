@@ -1,9 +1,5 @@
 import React from "react";
-
-interface IButton {
-    onClick: Function;
-    text: string;
-}
+import { IButton } from "./IButton";
 
 const BasicButton = ({ onClick, text } : IButton) => {
     return (

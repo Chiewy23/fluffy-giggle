@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 /**
  * **** TO-DO ****
  *  - Complete unit tests.
+ *  - Finish Default page.
  *  - Sidebar:
  *      - Login
  *      - Create Robot
@@ -25,7 +26,9 @@ class App extends Component {
             <Routes>
                 <Route path="/fluffy-giggle" element={<Home />} />
                 <Route path="/fluffy-giggle/:id" element={<RobotPage />} />
-                <Route path="*" element={<DefaultPage onClick={ () => console.log("Temp callback") } />} />
+                <Route path="*" element={
+                    <DefaultPage onClick={ () => console.log("Temp callback") } text="Oops! We don't recognise that URL." />
+                } />
             </Routes>
         </Router>
         );

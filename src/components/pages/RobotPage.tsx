@@ -5,13 +5,7 @@ import Header from "../header/Header";
 import "./robot-page.css";
 
 import { useLocation, useNavigate } from "react-router-dom";
-
-interface IStateRobotPage {
-    name: string;
-    email: string;
-    text: string;
-    id: string;
-}
+import { IStateRobotPage } from "./IStateRobotPage";
 
 const RobotPage = () => {
     const location = useLocation();
@@ -27,7 +21,6 @@ const RobotPage = () => {
 
     const { name, email, text, id }  = location.state as IStateRobotPage;
     
-
     return (
         <React.Fragment>
             <Header />

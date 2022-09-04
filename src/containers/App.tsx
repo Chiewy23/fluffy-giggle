@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 /**
  * **** TO-DO ****
  *  - Complete unit tests.
- *  - Finish Default page.
  *  - Sidebar:
  *      - Login
  *      - Create Robot
@@ -19,6 +18,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
  *  - Save Robots to DB (Redis or Postgres)
  */
 
+
+ const redirect = () => {
+     return <Route path="/fluffy-giggle" element={<Home />} />;
+ }
+
 class App extends Component {
     render() {
         return (
@@ -27,7 +31,7 @@ class App extends Component {
                 <Route path="/fluffy-giggle" element={<Home />} />
                 <Route path="/fluffy-giggle/:id" element={<RobotPage />} />
                 <Route path="*" element={
-                    <DefaultPage onClick={ () => console.log("Temp callback") } text="Oops! We don't recognise that URL." />
+                    <DefaultPage onClick={ redirect } text="Oops! We don't recognise that URL." />
                 } />
             </Routes>
         </Router>

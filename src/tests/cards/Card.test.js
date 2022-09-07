@@ -6,6 +6,7 @@ describe("When mounting the Card component", () => {
     const stubProps = {
         name: "Charlie",
         email: "charlie@chaplin.com",
+        bs: "Info on robot",
         id: "1234"
     };
 
@@ -14,7 +15,7 @@ describe("When mounting the Card component", () => {
             <Card key={stubProps.id} name={stubProps.name} email={stubProps.email} id={stubProps.id} />
         </Router>);
 
-        expect(screen.getByTestId("name").textContent).toBe("Charlie");
+        expect(screen.getByTestId(`name-${stubProps.id}`).textContent).toBe("Charlie");
     });
 
     it("should render the email props", () => {
@@ -22,6 +23,6 @@ describe("When mounting the Card component", () => {
             <Card key={stubProps.id} name={stubProps.name} email={stubProps.email} id={stubProps.id} />
         </Router>);
         
-        expect(screen.getByTestId("email").textContent).toBe("charlie@chaplin.com");
+        expect(screen.getByTestId(`email-${stubProps.id}`).textContent).toBe("charlie@chaplin.com");
     });
 });

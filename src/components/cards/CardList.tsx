@@ -5,7 +5,7 @@ import React from "react";
 import Card from "./Card";
 
 const CardList = ({ robots } : ICardList) => {
-    return <React.Fragment> {
+    return <div data-testid={`robots`}> {
         robots.map((robot: IRobot) => {
             return <Card key={robot.id}
                         name={robot.name}
@@ -13,7 +13,7 @@ const CardList = ({ robots } : ICardList) => {
                         text={robot.company.bs}
                         id={robot.id} />
         })
-    } </React.Fragment> 
+    } </div> 
 }
 
 export default CardList;

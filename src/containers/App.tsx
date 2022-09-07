@@ -14,7 +14,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
  *      - Create Robot
  *      - Delete Robot
  *      - Edit Robot
- *  - Create Robot option.
  *  - Save Robots to DB (Redis or Postgres)
  */
 

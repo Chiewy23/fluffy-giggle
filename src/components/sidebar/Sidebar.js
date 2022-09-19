@@ -5,7 +5,8 @@ import "./sidebar.css";
 
 const Sidebar = (props) => {
     const { loggedIn, isOpen } = props;
-    const [width, setWidth] = useState("0%");
+    // const [width, setWidth] = useState("0%");
+    const [width, setWidth] = useState("15%");
 
     const toggleSidebar = () => {
         isOpen = !isOpen;
@@ -16,15 +17,19 @@ const Sidebar = (props) => {
      (
         <React.Fragment>
             <div style={{width: width}}>
-                <BasicButton onClick={() => {console.log("Add Robot")}} text="Add Robot"/>
+                <BasicButton onClick={() => {toggleSidebar()}} text="Add Robot"/>
                 <BasicButton onClick={() => {console.log("Log Out")}} text="Log Out"/>
             </div>
+
+            { this.props.children }
         </React.Fragment>
     ) : (
         <React.Fragment>
             <div style={{width: width}}>
                 <BasicButton onClick={() => {console.log("Log In")}} text="Log In"/>
-=            </div>
+           </div>
+
+           { props.children }
         </React.Fragment>
     )
  };

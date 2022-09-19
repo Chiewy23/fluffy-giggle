@@ -12,6 +12,8 @@ import ErrorBoundary from "../error-handling/ErrorBoundary";
 import Header from "../header/Header";
 import React, { ChangeEventHandler } from "react";
 
+import Sidebar from "../sidebar/Sidebar";
+
 const mapStateToProps = (state: { searchRobots: ISearchRobots, requestRobots: IRequestRobots }) => {
     return {
         searchField: state.searchRobots.searchField,

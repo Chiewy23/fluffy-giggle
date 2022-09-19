@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
  *      - Delete Robot
  *      - Edit Robot
  *  - Save Robots to DB (Redis or Postgres)
+ *  - Convert reducers/actions to TS
  */
 
 
